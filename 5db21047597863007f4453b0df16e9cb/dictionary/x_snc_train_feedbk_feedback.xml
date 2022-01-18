@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="no_attachment=true,no_attachments=true" extends="rm_feature" label="Training Course Feedback" max_length="40" name="x_snc_train_feedbk_feedback" sizeclass="0" type="collection">
+        <element label="Agile Product" max_length="100" name="agile_product" type="string"/>
+        <element label="Agile Product Release" max_length="160" name="agile_product_release" type="string"/>
+        <element choice="1" label="Feedback Location" max_length="80" name="defect_location" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Course IT Environment (applications and systems used for the course)" value="environment"/>
+                <element inactive_on_update="false" label="General (does not pertain to any specific course resource)" value="general"/>
+                <element inactive_on_update="false" label="Participant Guide (Book)" value="book"/>
+                <element inactive_on_update="false" label="Student Lab Instance" value="instance"/>
+            </choice>
+        </element>
+        <element choice="3" label="Defect Type" max_length="100" name="defect_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Content - Confusing / Unclear" value="content_confusing"/>
+                <element inactive_on_update="false" label="Content - Incomplete" value="content_incomplete"/>
+                <element inactive_on_update="false" label="Content - Incorrect / Inaccurate" value="content_incorrect"/>
+                <element inactive_on_update="false" label="Content - Insufficient" value="content_insufficient"/>
+                <element inactive_on_update="false" label="Content - Outdated" value="content_outdated"/>
+                <element inactive_on_update="false" label="Content - Spelling, Grammar, or Formatting" value="content_proofing"/>
+                <element inactive_on_update="false" label="Environment - Performance Issues (other systems used in the course)" value="environment_performance"/>
+                <element inactive_on_update="false" label="Environment - Resource Errors" value="environment_errors"/>
+                <element inactive_on_update="false" label="Environment - Resource Unavailable" value="environment_unavailable"/>
+                <element inactive_on_update="false" label="Instance - Configuration Errors" value="instance_configuration"/>
+                <element inactive_on_update="false" label="Instance - Performance" value="instance_performance"/>
+                <element inactive_on_update="false" label="Other (Please Specify)" value="other"/>
+            </choice>
+        </element>
+        <element label="Other" max_length="80" name="defect_type_other" type="string"/>
+        <element choice="1" label="Feedback type" max_length="40" name="feedback_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Defect" value="defect"/>
+                <element inactive_on_update="false" label="Enhancement" value="enhancement"/>
+                <element inactive_on_update="false" label="General Comment" value="comment"/>
+            </choice>
+        </element>
+        <element label="Instructor Email" max_length="100" name="instructor_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Instructor - Request Updates from Curriculum Team" max_length="40" name="instructor_watch_list" type="boolean"/>
+        <element label="Lab name" max_length="100" name="lab_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Module Number" max_length="40" name="module_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Page Number" max_length="40" name="page_number" type="integer"/>
+        <element label="Source Instance URL" max_length="1024" name="source_instance_url" type="url"/>
+        <element attributes="edge_encryption_enabled=true" label="Submission Timestamp" max_length="40" name="submission_timestamp" type="glide_date_time"/>
+        <element label="Submitter Email" max_length="100" name="submitter_email" type="string"/>
+        <element label="Submitter Name" max_length="101" name="submitter_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Validation Timestamp" max_length="40" name="validation_timestamp" type="glide_date_time"/>
+        <element label="Workaround Provided / Used" max_length="4000" name="workaround" type="string_full_utf8"/>
+    </element>
+</database>
